@@ -4,12 +4,11 @@
     </head>
     <body>
       <h1>Community Events Board</h1>
-      <div class="event-list">
-        <ul>
-          {% for event in events %}
-            <li>{{ event.event }} - {{ event.date }}</li>
-          {% endfor %}
-        </ul>
-      </div>
+
+      <form method="POST" action="/events">
+        <input type="text" name=first_name placeholder="What's your name?">
+        <input type="date" name=date placeholder="What is today's date">
+        <input type="submit" value="Submit">
+    </form>
     </body>
 </html>
